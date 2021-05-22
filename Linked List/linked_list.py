@@ -1,6 +1,6 @@
 class Node(object):
     """
-    Singly Linked List Node.
+    Linked List Node.
 
     Parameters:
     ----------
