@@ -126,7 +126,7 @@ class CircularLinkedList(object):
         Returns:
         ---------
             int : data
-        """ 
+        """
         if not self.__len:
             print(self.__ERROR_EMPTY)
             return
