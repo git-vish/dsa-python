@@ -19,8 +19,8 @@ class LinkedList(object):
     """
     Singly Linked List.
     """
-    ERROR_INDEX = 'ERROR: Invalid Index:'
-    ERROR_EMPTY = 'ERROR: List Empty'
+    __ERROR_INDEX = 'ERROR: Invalid Index:'
+    __ERROR_EMPTY = 'ERROR: List Empty'
 
     def __init__(self):
         self.__head = None
@@ -86,7 +86,7 @@ class LinkedList(object):
             None
         """
         if index <= 0:
-            print(self.ERROR_INDEX, index)
+            print(self.__ERROR_INDEX, index)
             return
 
         new_node = Node(data)
@@ -106,7 +106,7 @@ class LinkedList(object):
                 c_position += 1
 
             if c_position < index - 1:
-                print(self.ERROR_INDEX, index)
+                print(self.__ERROR_INDEX, index)
                 return
 
             new_node.next = current.next
@@ -128,11 +128,11 @@ class LinkedList(object):
             int: data at specified index
         """
         if not self.__len:
-            print(self.ERROR_EMPTY)
+            print(self.__ERROR_EMPTY)
             return
 
         if index > self.__len or index <= 0:
-            print(self.ERROR_INDEX)
+            print(self.__ERROR_INDEX)
             return
 
         c_position = 1
@@ -158,14 +158,14 @@ class LinkedList(object):
             int : data
         """
         if not self.__len:
-            print(self.ERROR_EMPTY)
+            print(self.__ERROR_EMPTY)
             return
 
         if not index:
             index = self.__len
 
         if index > self.__len or index <= 0:
-            print(self.ERROR_INDEX)
+            print(self.__ERROR_INDEX)
             return
 
         if index == 1:
@@ -207,7 +207,7 @@ class LinkedList(object):
             int: index
         """
         if not self.__len:
-            print(self.ERROR_EMPTY)
+            print(self.__ERROR_EMPTY)
             return
 
         current = self.__head
@@ -223,7 +223,7 @@ class LinkedList(object):
     def get_middle(self) -> int or None:
         """Get data at middle node."""
         if not self.__len:
-            print(self.ERROR_EMPTY)
+            print(self.__ERROR_EMPTY)
             return
 
         slow = self.__head
@@ -238,7 +238,7 @@ class LinkedList(object):
     def reverse(self) -> None:
         """Reverse Linked List."""
         if not self.__len:
-            print(self.ERROR_EMPTY)
+            print(self.__ERROR_EMPTY)
             return
 
         if self.__len == 1:
@@ -279,7 +279,7 @@ class LinkedList(object):
     def remove_duplicates(self) -> None:
         """Remove nodes with duplicate data."""
         if not self.__len:
-            print(self.ERROR_EMPTY)
+            print(self.__ERROR_EMPTY)
             return
 
         if self.__len == 1:
