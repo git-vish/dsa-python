@@ -156,6 +156,7 @@ class BST(object):
                     3 : Post-order
                     4 : Level-order
         Returns:
+        ----------
             List[int] : traversal list.
         """
         if not self.__root:
